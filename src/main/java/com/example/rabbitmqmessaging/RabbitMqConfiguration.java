@@ -33,11 +33,11 @@ public class RabbitMqConfiguration {
 
     @Bean
     Binding binding(){
-        return BindingBuilder.bind(createQueue()).to(exchange()).with("group1.*");
+        return BindingBuilder.bind(createQueue()).to(exchange()).with("mohamed.group1");
     }
     @Bean
     Binding binding2(){
-        return BindingBuilder.bind(createAnotherQueue()).to(exchange()).with("group1.*");
+        return BindingBuilder.bind(createAnotherQueue()).to(exchange()).with("ahmed.group1");
     }
 
   /*  @Bean
