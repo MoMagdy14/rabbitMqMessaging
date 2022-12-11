@@ -20,7 +20,7 @@ public class SendMessageController {
     @PostMapping("/send")
     public String sendMessage(@RequestParam String theMessage){
         rabbitTemplate.convertAndSend("amrExchange",
-                "group1.all", theMessage);
+                "all", theMessage);
         return "We have sent a message! :" + theMessage;
     }
 }
